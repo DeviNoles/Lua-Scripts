@@ -3,6 +3,7 @@ function main()
     print("Waiting for Rednet Transmissions...")
     modem = peripheral.wrap("left")
     modem.open(69)
+    hubChest = peripheral.wrap("back")
     while true do
         event, modemSide, senderChannel, replyChannel, message, senderDistance = os.pullEvent("modem_message")
  --       print(message)
